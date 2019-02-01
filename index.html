@@ -18,7 +18,11 @@
           <li><a href="contacts.html">Контакты</a></li>
         </ul>
         <ul class="user-navigation">
-          <li class="login-link">Вход</li>
+          <li>
+            <a class="login-link" href="login.html">
+              Вход
+            </a>
+          </li>
         </ul>
       </nav>
     </header>
@@ -62,10 +66,12 @@
       <section class="gallery">
         <h2>Фотогалерея</h2>
         <figure class="gallery-content">
-          <a href="#"><img src="img/studio.jpg" width="286" height="164" alt="Интерьер"></a>
+          <a href="#">
+            <img src="img/studio.jpg" width="286" height="164" alt="Интерьер">
+           </a>
         </figure>
-        <span class="button gallery-button gallery-button-back">Назад</span>
-        <span class="button gallery-button gallery-button-next">Вперед</span>
+        <button class="button gallery-button gallery-button-back" type="button">Назад</button>
+        <button class="button gallery-button gallery-button-next" type="button">Вперед</button>
       </section>
 
        <section class="contacts">
@@ -107,6 +113,45 @@
           <button class="button" type="submit">Отправить</button>
         </form>
       </section>
+      <section class="modal modal-login">
+        <h2>Личный кабинет</h2>
+        <p>Введите свой логин и пароль.</p>
+        <form class="login-form" action="https://echo.htmlacademy.ru" method="post">
+          <p>
+            <label class="visually-hidden" for="user-login">Логин</label>
+            <input class="login-icon-user" id="user-login" type="text" name="login" placeholder="Логин">
+          </p>
+          <p>
+            <label class="visually-hidden" for="user-password">Пароль</label>
+            <input class="login-icon-password" id="user-password" type="password" name="password" placeholder="Пароль">
+          </p>
+          <p class="login-password-info">
+            <label class="login-checkbox">
+              <input type="checkbox" name="remember">
+              Запомните меня
+            </label>
+            <a class="restore" href="#">Я забыл пароль!</a>
+          </p>
+          <button class="button" type="submit">
+            Войти
+          </button>
+        </form>
+        <button class="modal-close" type="button">
+          Закрыть
+        </button>
+      </section>
+
+      <section class="modal modal-map">
+        <h2 class="visually-hidden">
+          Как до нас добраться
+        </h2>
+        <p>
+          <img src="img/map.jpg" width="780" height="560" alt="Офис компании по адресу ул. Большая Конюшенная 19/8, Санкт-Петербург">
+        </p>
+        <button class="modal-close" type="button">
+          Закрыть
+        </button>
+      </section>
     </main>
     <footer class="main-footer">
       <p class="footer-contacts">
@@ -129,32 +174,6 @@
       </p>
     </footer>
 
-    <section class="modal modal-login">
-      <h2>Личный кабинет</h2>
-      <p>Введите свой логин и пароль.</p>
-      <form class="modal-login-form" method="post" action="http://echo.htmlacademy.ru">
-        <p class="modal-login-item">
-          <label for="login-value">Логин</label>
-          <input type="text" id="login-value" name="login" placeholder="Логин">
-        </p>
-        <p class="modal-login-item">
-          <label for="password-value">Пароль</label>
-          <input type="text" id="password-value" name="passpword" placeholder="Пароль">
-        </p>
-        <p class="modal-login-item">
-          <label for="remember-me">Запомните меня</label>
-          <input type="checkbox" id="remember-me">
-          <a class="restore" href="#">Я забыл пароль!</a>
-        </p>
-        <button type="submit">Войти</button>
-      </form>
-      <button class="modal-close" type="button">Закрыть</button>
-    </section>
 
-    <section class="modal modal-map">
-      <h2 class="visually-hidden">Как до нас добраться</h2>
-      <img scr="img/map.jpg" width="100" height="100" alt="Карта. Адрес: г. САНКТ-ПЕТЕРБУРГ, УЛ. Б. КОНЮШЕННАЯ, Д. 19/8">
-      <button class="modal-close" type="button">Закрыть</button>
-    </section>
   </body>
 </html>
